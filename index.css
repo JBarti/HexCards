@@ -50,7 +50,8 @@ body {
 }
 
 .hex-container>.hex:hover {
-	background: #007bff !important;
+	filter: blur(2px);
+	background-color: #007bff !important;
 }
 
 .col-cards {
@@ -91,7 +92,7 @@ body {
 }
 
 .container-cards>.hex:hover {
-	filter: grayscale(80%);
+	filter: blur(2px);
 }
 
 .cards-tools {
