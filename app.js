@@ -3,7 +3,7 @@ const request = require("request");
 const { setup_decks, tab_setup, click_colapse_sidebar_generator } = require("./scripts/navbar");
 const { generate_grid, fill_hexagon, grid_state, empty_hexagon } = require("./scripts/grid");
 
-const DECK_API_URL = "http://51.116.135.59:3001/decks";
+const DECK_API_URL = "https://hex-cards-api.herokuapp.com/decks";
 
 const DEFAULT_HEX_WIDTH = 200;
 const DEFAULT_HEX_HEIGHT = 174;
