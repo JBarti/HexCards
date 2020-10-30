@@ -40795,36 +40795,30 @@ function getr(priv) {
 
 },{"bn.js":"node_modules/browserify-rsa/node_modules/bn.js/lib/bn.js","randombytes":"node_modules/randombytes/browser.js","buffer":"node_modules/buffer/index.js"}],"node_modules/elliptic/package.json":[function(require,module,exports) {
 module.exports = {
-  "_args": [
-    [
-      "elliptic@6.5.3",
-      "/home/jbarti/Documents/Projects/HexCards"
-    ]
-  ],
-  "_development": true,
-  "_from": "elliptic@6.5.3",
+  "_from": "elliptic@^6.5.3",
   "_id": "elliptic@6.5.3",
   "_inBundle": false,
   "_integrity": "sha512-IMqzv5wNQf+E6aHeIqATs0tOLeOTwj1QKbRcS3jBbYkl5oLAserA8yJTT7/VyHUYG91PRmPyeQDObKLPpeS4dw==",
   "_location": "/elliptic",
   "_phantomChildren": {},
   "_requested": {
-    "type": "version",
+    "type": "range",
     "registry": true,
-    "raw": "elliptic@6.5.3",
+    "raw": "elliptic@^6.5.3",
     "name": "elliptic",
     "escapedName": "elliptic",
-    "rawSpec": "6.5.3",
+    "rawSpec": "^6.5.3",
     "saveSpec": null,
-    "fetchSpec": "6.5.3"
+    "fetchSpec": "^6.5.3"
   },
   "_requiredBy": [
     "/browserify-sign",
     "/create-ecdh"
   ],
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.5.3.tgz",
-  "_spec": "6.5.3",
-  "_where": "/home/jbarti/Documents/Projects/HexCards",
+  "_shasum": "cb59eb2efdaf73a0bd78ccd7015a62ad6e0f93d6",
+  "_spec": "elliptic@^6.5.3",
+  "_where": "/home/jbarti/Documents/Projects/HexCardGame/node_modules/browserify-sign",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -40832,6 +40826,7 @@ module.exports = {
   "bugs": {
     "url": "https://github.com/indutny/elliptic/issues"
   },
+  "bundleDependencies": false,
   "dependencies": {
     "bn.js": "^4.4.0",
     "brorand": "^1.0.1",
@@ -40841,6 +40836,7 @@ module.exports = {
     "minimalistic-assert": "^1.0.0",
     "minimalistic-crypto-utils": "^1.0.0"
   },
+  "deprecated": false,
   "description": "EC cryptography",
   "devDependencies": {
     "brfs": "^1.4.3",
@@ -112958,11 +112954,13 @@ function select_hexagon(event) {
   if (selected_hex) {
     selected_hex.classList.remove("bg-primary");
     selected_hex.classList.add("bg-light");
+    selected_hex.style.removeProperty("filter");
   }
 
   var new_select = event.target;
   new_select.classList.add("bg-primary");
   new_select.classList.remove("bg-light");
+  new_select.style.filter = "blur(2px)";
 }
 
 function fill_hexagon(image_url) {
@@ -113022,7 +113020,7 @@ var _require2 = require("./scripts/grid"),
     grid_state = _require2.grid_state,
     empty_hexagon = _require2.empty_hexagon;
 
-var DECK_API_URL = "http://51.116.135.59:3001/decks";
+var DECK_API_URL = "https://hex-cards-api.herokuapp.com/decks";
 var DEFAULT_HEX_WIDTH = 200;
 var DEFAULT_HEX_HEIGHT = 174;
 var DEFAULT_GRID_AUTO_ROWS = 87;
@@ -113099,7 +113097,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33169" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37793" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

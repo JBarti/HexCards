@@ -33,12 +33,14 @@ function select_hexagon(event) {
 	if(selected_hex) {
 		selected_hex.classList.remove("bg-primary");
 		selected_hex.classList.add("bg-light");
+		selected_hex.style.removeProperty("filter");
 	}
 
 	const new_select = event.target;
 
 	new_select.classList.add("bg-primary");
 	new_select.classList.remove("bg-light");
+	new_select.style.filter = "blur(2px)";
 }
 
 
