@@ -9,6 +9,6 @@
         "ecmaVersion": 12
     },
     "rules": {
-        "indent": [2, "tab"]
+        "indent": ["error", 4]
     }
 }
