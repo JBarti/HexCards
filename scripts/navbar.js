@@ -27,7 +27,6 @@ function build_cards(selected_cards) {
     const template_hexagon = document.querySelector("#hex-template");
 
     Array.from(cards_container.querySelectorAll(".hex:not(.first)"))
-        .slice(1)
         .forEach(element => {
             element.remove()
         });
