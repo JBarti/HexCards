@@ -41,7 +41,7 @@ document.querySelector(".btn-colapse")
         click_colapse,
     );
 
-const btn_open = document.querySelector(".btn-open")
+const btn_open = document.querySelector(".btn-open");
 btn_open
     .addEventListener(
         "click",
@@ -50,3 +50,10 @@ btn_open
 btn_open.style.display = "none";
 
 const hex_container = document.querySelector(".hex-container");
+document.querySelector(".zoom-scale")
+    .addEventListener(
+        "change", 
+        function(e) {
+            hex_container.style.transform = `scale(${e.target.value})`;
+        }
+    );
