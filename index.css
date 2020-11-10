@@ -43,14 +43,6 @@ body {
     transition-duration: 0.2s;
 }
 
-.hex-delete {
-    text-align: center;
-    line-height: 220px;
-    font-weight: bold;
-    font-size: 20px;
-    padding-left: 62px;
-}
-
 .hex-container>.hex:hover {
     background-color: #007bff !important;
     border: 5px solid #007bff;
