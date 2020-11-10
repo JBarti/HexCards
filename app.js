@@ -3,8 +3,8 @@ const request = require("request");
 const { setup_decks, tab_setup, click_colapse_sidebar_generator } = require("./scripts/navbar");
 const { generate_grid, fill_hexagon, grid_state, empty_hexagon } = require("./scripts/grid");
 
-//const DECK_API_URL = "https://hex-cards-api.herokuapp.com/decks";
-const DECK_API_URL = "http://0.0.0.0:3000/decks";
+const DECK_API_URL = "https://hex-cards-api.herokuapp.com/decks";
+//const DECK_API_URL = "http://0.0.0.0:3000/decks";
 
 
 function detect_mobile() {
