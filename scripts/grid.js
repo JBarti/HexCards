@@ -15,7 +15,6 @@ const grid_state = {
 
     restore: function() {
         this.data = JSON.parse(window.localStorage.getItem("hex_grid_map") || "{}");
-        console.log(this.data);
         Object.keys(this.data).forEach(hex_position => {
             const hex = document.querySelector(`[data-position="${hex_position}"]`);
             hex.style.backgroundImage = `url("${this.data[hex_position]}")`;
