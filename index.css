@@ -119,3 +119,23 @@ nav {
 .dropdown-menu>input {
     width: 100%;
 }
+
+.text-img {
+    display: flex;
+    flex-direction: row;
+}
+
+.text-img>img {
+    flex: 1 0 0%;
+}
+
+.text-img>p {
+    flex: 1 0 0%;
+}
+
+.img-sidebar {
+    height:300px;
+    width:auto;
+    float:left; 
+    margin-right:5px;
+}

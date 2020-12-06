@@ -69,6 +69,9 @@ document.querySelector(".zoom-scale")
         }
     );
 
+if(!localStorage.getItem("visited")) {
+    $(".modal-tutorial").modal("show");
+}
 
 if(detect_mobile()) {
     document.querySelector(".grid-container").style.overflow = "auto";
@@ -80,3 +83,5 @@ if(detect_mobile()) {
             $(".modal-fullscreen").modal("hide");
         });
 }
+
+window.localStorage.setItem("visited", true);
