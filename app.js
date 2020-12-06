@@ -69,9 +69,15 @@ document.querySelector(".zoom-scale")
         }
     );
 
-if(!localStorage.getItem("visited")) {
+const showMessageStartup = localStorage.getItem("visited");
+if(!showMessageStartup || showMessageStartup == "false") {
     $(".modal-tutorial").modal("show");
 }
+
+$(".modal-tutorial").on("hidden.bs.modal", function() {
+    const showMessage = document.querySelector("#showMessage").checked;
+    localStorage.setItem("visited", showMessage);
+});
 
 if(detect_mobile()) {
     document.querySelector(".grid-container").style.overflow = "auto";
@@ -84,4 +90,3 @@ if(detect_mobile()) {
         });
 }
 
-window.localStorage.setItem("visited", true);
