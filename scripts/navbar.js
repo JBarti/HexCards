@@ -32,7 +32,7 @@ function build_cards(selected_cards) {
         });
 
     selected_cards.forEach((card_url) => {
-        const hexagon = template_hexagon.content.cloneNode(true).firstChild;
+        const hexagon = template_hexagon.childNodes[0].cloneNode(true);
         hexagon.addEventListener("click", () => {
             cards_container.dispatchEvent(
                 new CustomEvent("cardSelect", {detail: {image_url: card_url}})
@@ -53,7 +53,7 @@ function setup_decks(DECKS) {
     const decks_container = document.querySelector(".container-decks");
 
     deck_covers.forEach((cover, index) => {
-        const hexagon = template_hexagon.content.cloneNode(true).firstChild;
+        const hexagon = template_hexagon.cloneNode(true).firstChild;
         hexagon.style.backgroundImage = `url("${cover}")`;
         decks_container.appendChild(hexagon);
         hexagon.addEventListener("click", () => {

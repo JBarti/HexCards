@@ -32,6 +32,7 @@ request(DECK_API_URL, function(err, resp, body) {
 
 });
 
+window.location.hash = "#nav-decks";
 grid_state.restore();
 window.addEventListener("hashchange", tab_setup);
 window.addEventListener("beforeunload", () => grid_state.store());

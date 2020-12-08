@@ -10,8 +10,7 @@ body {
 }
 
 .container { 
-    margin: 0px;
-    max-width: 100%;
+    margin: 0px; max-width: 100%;
 }
 
 .grid-container {
@@ -138,4 +137,8 @@ nav {
     width:auto;
     float:left; 
     margin-right:5px;
+}
+
+.template {
+    display: none;
 }

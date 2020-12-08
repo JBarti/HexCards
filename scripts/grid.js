@@ -70,11 +70,12 @@ function empty_hexagon() {
 
 function generate_grid() {
     const template_hexagon = document.querySelector("#hex-template");
+    console.log(template_hexagon)
     const grid_container = document.querySelector(".hex-container");
 
     for (let j = 1; j <= 16; j++) {
         for (let i = 1; i <= 10; i++) {
-            const hexagon = template_hexagon.content.cloneNode(true).firstChild;
+            const hexagon = template_hexagon.childNodes[0].cloneNode(true);
             hexagon.setAttribute("data-position", `${j}-${i}`);
             hexagon.addEventListener("click", select_hexagon);
             hexagon.style.gridRowStart = j;
