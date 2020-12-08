@@ -70,7 +70,6 @@ function empty_hexagon() {
 
 function generate_grid() {
     const template_hexagon = document.querySelector("#hex-template");
-    console.log(template_hexagon)
     const grid_container = document.querySelector(".hex-container");
 
     for (let j = 1; j <= 16; j++) {
