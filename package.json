@@ -12,7 +12,7 @@
   "devDependencies": {
     "eslint": "^7.10.0",
     "parcel": "^2.8.1",
-    "parcel-plugin-static-files-copy": "^1.2.4",
+    "parcel-reporter-static-files-copy": "^1.4.0",
     "prettier": "^2.1.2",
     "sass": "^1.26.11",
     "serve": "^14.1.2"
@@ -21,7 +21,6 @@
     "request": "^2.88.2"
   },
   "staticFiles": {
-    "staticPath": "assets/cards",
-    "watcherGlob": "**"
+    "staticPath": "./assets/cards"
   }
 }
