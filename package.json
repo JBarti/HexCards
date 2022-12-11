@@ -2,7 +2,6 @@
   "name": "hexcardgame",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "npx parcel ./index.html",
     "start": "npx serve ./dist",
@@ -12,11 +11,11 @@
   "license": "ISC",
   "devDependencies": {
     "eslint": "^7.10.0",
-    "parcel": "^1.12.4",
-    "parcel-plugin-static-files-copy": "^2.6.0",
+    "parcel": "^2.8.1",
+    "parcel-plugin-static-files-copy": "^1.2.4",
     "prettier": "^2.1.2",
     "sass": "^1.26.11",
-    "serve": "^11.3.2"
+    "serve": "^14.1.2"
   },
   "dependencies": {
     "request": "^2.88.2"
